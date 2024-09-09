@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Belajar Tailwind</title>
+  </head>
+  <body>
+    <nav class="nav bg-orange-300 flex items-center justify-between p-3">
+      <!-- Logo Section -->
+      <div class="logo flex items-center">
+        <img
+          src="https://img.freepik.com/free-vector/bird-colorful-gradient-design-vector_343694-2506.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1725753600&semt=ais_hybrid"
+          alt="Logo"
+          class="rounded-full w-11 h-11"
+        />
+        <p class="ml-2 text-lg font-semibold">My Tailwind</p>
+      </div>
+
+      <!-- Hamburger Icon (Visible on Small Screens) -->
+      <button id="menu-toggle" class="lg:hidden block p-2 focus:outline-none">
+        <!-- Hamburger Icon -->
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+      </button>
+
+      <!-- Menu (Hidden on Small Screens) -->
+      <ul
+        id="menu"
+        class="menu-container hidden lg:flex flex-col lg:flex-row gap-4 bg-orange-200 lg:bg-transparent absolute lg:static top-16 right-0 w-full lg:w-auto p-4 lg:p-0 lg:items-center"
+      >
+        <li class="menu p-3">Home</li>
+        <li class="menu p-3">About</li>
+        <li class="menu p-3">Contact</li>
+        <li class="menu p-3 bg-slate-800 rounded-2xl text-cyan-200">Login</li>
+      </ul>
+    </nav>
+
+    <!-- Script for Hamburger Toggle -->
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("menu");
+
+      menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
